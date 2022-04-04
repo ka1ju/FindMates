@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/img/icon.png" >
+    <title>Register</title>
+</head>
+<body><div class="background">
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/news';"><button class="main_button">News</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/find_mates';"><button class="main_button">Find mates</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/my_mates';"><button class="main_button_2">My mates</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/profiles';"><button class="main_button_2">Profile</button></p>
+</div>
+    <h1>Register</h1>
+    <input type="text" id="login" placeholder="Login" name="login">
+    <input type="email" id="email" placeholder="Email" name="email">
+    <input type="text" id="password" placeholder="Password" name="password">
+    <input type="text" id="password_confirm" placeholder="Confirm password" name="password_confirm">
+    <input type="text" id="discord" placeholder="Discord" name="discord">
+    <div>
+        <label>Competitive rank</label>
+        <br>
+        <select id="competitiveRankSelect">
+            <option>Silver 1</option>
+            <option>Silver 2</option>
+            <option>Silver 3</option>
+            <option>Silver 4</option>
+            <option>Silver elite</option>
+            <option>Silver elite master</option>
+            <option>Gold nova 1</option>
+            <option>Gold nova 2</option>
+            <option>Gold nova 3</option>
+            <option>Gold nova master</option>
+            <option>Master guardian 1</option>
+            <option>Master guardian 2</option>
+            <option>Master guardian elite</option>
+            <option>Distinguished master guardian</option>
+            <option>Legendary eagle</option>
+            <option>Legendary eagle master</option>
+            <option>Supreme master first class</option>
+            <option>The global elite</option>
+        </select>
+    </div>
+    <div>
+        <label>Wingman rank</label>
+        <br>
+        <select class="form-control" id="wingmanRankSelect">
+            <option>Silver 1</option>
+            <option>Silver 2</option>
+            <option>Silver 3</option>
+            <option>Silver 4</option>
+            <option>Silver elite</option>
+            <option>Silver elite master</option>
+            <option>Gold nova 1</option>
+            <option>Gold nova 2</option>
+            <option>Gold nova 3</option>
+            <option>Gold nova master</option>
+            <option>Master guardian 1</option>
+            <option>Master guardian 2</option>
+            <option>Master guardian elite</option>
+            <option>Distinguished master guardian</option>
+            <option>Legendary eagle</option>
+            <option>Legendary eagle master</option>
+            <option>Supreme master first class</option>
+            <option>The global elite</option>
+        </select>
+    </div>
+    <div>
+        <label>Faceit level</label>
+        <br>
+        <select id="faceitLevelSelect">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>3k elo</option>
+            <option>4k elo</option>
+        </select>
+    </div>
+    <p><button>register</button></p>
+    <hr>
+    <p onclick="window.location.href = 'http://127.0.0.1:8080/profiles';"><button type="submit">login</button></p>
+</body>
+</html>
