@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Register</title>
+{% endblock %}
+
+{% block content %}
+<h1 class="f_r">Register</h1>
+<form action="http://127.0.0.1:8080/news" method="post" class="full_register_form">
+<div>
+    <label>Competitive rank</label>
+    <br>
+    <select class="full_register_select" id="competitiveRankSelect">
+        <option>Silver 1</option>
+        <option>Silver 2</option>
+        <option>Silver 3</option>
+        <option>Silver 4</option>
+        <option>Silver elite</option>
+        <option>Silver elite master</option>
+        <option>Gold nova 1</option>
+        <option>Gold nova 2</option>
+        <option>Gold nova 3</option>
+        <option>Gold nova master</option>
+        <option>Master guardian 1</option>
+        <option>Master guardian 2</option>
+        <option>Master guardian elite</option>
+        <option>Distinguished master guardian</option>
+        <option>Legendary eagle</option>
+        <option>Legendary eagle master</option>
+        <option>Supreme master first class</option>
+        <option>The global elite</option>
+    </select>
+</div>
+<div>
+    <label>Wingman rank</label>
+    <br>
+    <select class="full_register_select" id="wingmanRankSelect">
+        <option>Silver 1</option>
+        <option>Silver 2</option>
+        <option>Silver 3</option>
+        <option>Silver 4</option>
+        <option>Silver elite</option>
+        <option>Silver elite master</option>
+        <option>Gold nova 1</option>
+        <option>Gold nova 2</option>
+        <option>Gold nova 3</option>
+        <option>Gold nova master</option>
+        <option>Master guardian 1</option>
+        <option>Master guardian 2</option>
+        <option>Master guardian elite</option>
+        <option>Distinguished master guardian</option>
+        <option>Legendary eagle</option>
+        <option>Legendary eagle master</option>
+        <option>Supreme master first class</option>
+        <option>The global elite</option>
+    </select>
+</div>
+<div>
+    <label>Faceit level</label>
+    <br>
+    <select class="full_register_select" id="faceitLevelSelect">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>3k elo</option>
+        <option>4k elo</option>
+    </select>
+</div>
+<p ><button class="full_register_button">Register</button></p>
+</form>
+{% endblock %}

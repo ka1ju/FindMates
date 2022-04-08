@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+  Add news
+</title>
+{% endblock %}
+
+{% block content %}
+<form class="add_news_form" method="post">
+<h1 style="margin-left: 40%">Create news</h1>
+  {{  form.hidden_tag()  }}
+  <p>
+  {{ form.title.label }}<br>
+        {{ form.title(class="form-control add_news_title") }}<br>
+  </p>
+  <p>
+  {{ form.content.label }}<br>
+        {{ form.content(class="form-control add_news_content") }}<br>
+  </p>
+  <p>
+        {{ form.submit(class="form-control add", type="submit") }}
+  </p>
+</form>
+{% endblock %}

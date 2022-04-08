@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block title%}
+<title>News</title>
+{%endblock%}
+
+{% block content %}
+<h1 style="margin-left: 48%">News</h1>
+
+{% for item in news%}
+<div class="news">
+    <h2>{{item.title}}</h2>
+    <textarea readonly class="news_form">{{item.content}}</textarea>
+    <h6>Автор - {{item.user.username}}, Дата написания - {{item.created_date}}</h6>
+</div>
+<br>
+{% endfor %}
+
+{% if current_user.is_authenticated %}
+<button class="add_news_button" onclick="window.location.href = 'http://127.0.0.1:8080/create_news';">+</button>
+{% endif %}
+{% endblock %}

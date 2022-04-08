@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Login
+</title>
+{% endblock %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+<form class="profile">
+<h1 class="prof">Profile</h1>
+    <table class="profile-table">
+    <tr class="profile-tr"><th class="profile-th">Name</th><td class="profile-tr">{{current_user.username}}</td></tr>
+    <tr class="profile-tr"><th class="profile-th">Competitive rank</th><td class="profile-tr">{{current_user.competitive_rank}}</td></tr>
+    <tr class="profile-tr"><th class="profile-th">Wingman rank</th><td class="profile-tr">{{current_user.wingman_rank}}</td></tr>
+    <tr class="profile-tr"><th class="profile-th">Faceit level </th><td class="profile-tr">{{current_user.faceit_level}}</td></tr>
+    <tr class="profile-tr"><th class="profile-th">Discord</th><td class="profile-tr">{{current_user.discord}}</td></tr>
+    <tr class="profile-tr"><th class="profile-th">Steam link</th><td class="profile-tr">{{current_user.steam}}</td></tr>
+    </table>
+</form>
+<a class="exit_button" href="http://127.0.0.1:8080/exit">Exit</a>
+{% else %}
+<h1 class="log">Login</h1>
+<form action="" method="post" class="login_form">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(class="form-control login_inputs", type="username") }}<br>
+        {% for error in form.username.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+  {% endfor %}
+  <p>
+        {{ form.password.label }}<br>
+        {{ form.password(class="form-control login_inputs", type="password") }}<br>
+        {% for error in form.password.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+  {% endfor %}
+  <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary login_button") }}</p>
+    <div>{{ message }}</div>
+</form>
+<hr>
+<p onclick="window.location.href = 'http://127.0.0.1:8080/register';" class="register_buttons"><button class="register_button">Register</button></p>
+{% endif %}
+
+{% endblock %}

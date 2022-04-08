@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+<form class="login_form">
+    <h1 class="log">Login</h1>
+    <input type="text" placeholder="Login" name="login" class="login_inputs">
+    <br>
+    <input type="text"  placeholder="Password" name="password" class="login_inputs">
+    <p><button class="login_button" type="submit">Login</button></p>
+    </form>
+
+    <form class="register_form">
+    <h1 class="reg">Register</h1>
+    <input type="text"  placeholder="Login" name="login" class="register_inputs">
+    <br>
+    <input type="text" placeholder="Password" name="password" class="register_inputs">
+    <p><button class="register_button" type="submit">Register</button></p>
+    </form>
+{% endblock %}

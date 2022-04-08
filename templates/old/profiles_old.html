@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/img/icon.png" >
+    <title>Login</title>
+</head>
+<body>
+<div class="background">
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/news';"><button class="main_button">News</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/find_mates';"><button class="main_button">Find mates</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/my_mates';"><button class="main_button_2">My mates</button></p>
+    <p class="main_buttons" onclick="window.location.href = 'http://127.0.0.1:8080/profiles';"><button class="main_button_2">Profile</button></p>
+</div>
+    <form class="login_form">
+    <h1 class="log">Login</h1>
+    <input type="text" placeholder="Login" name="login" class="login_inputs">
+    <br>
+    <input type="text"  placeholder="Password" name="password" class="login_inputs">
+    <p><button class="login_button" type="submit">Login</button></p>
+    </form>
+
+    <form class="register_form">
+    <h1 class="reg">Register</h1>
+    <input type="text"  placeholder="Login" name="login" class="register_inputs">
+    <br>
+    <input type="text" placeholder="Password" name="password" class="register_inputs">
+    <p><button class="register_button" type="submit">Register</button></p>
+    </form>
+</body>
+</html>

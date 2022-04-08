@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Find mates</title>
+{% endblock %}
+
+{% block content %}
+<h1 style="margin-left: 45.5%;">Find mates</h1>
+<table>
+<tr><th>Name</th><th>Competitive rank</th> <th>Wingman rank</th> <th>Faceit level</th><th>Discord</th><th style="background: black; border: 0;"></th></tr>
+        {% for user in  users%}
+        <tr><td>{{user.username}}</td><td>{{user.competitive_rank}}</td><td>{{user.wingman_rank}}</td><td>{{user.faceit_level}}</td><td>{{user.discord}}</td><td><a class="table_button" href="{{user.steam}}" target="_blank">Steam</a></td></tr>
+        {% endfor %}
+</table>
+{% endblock %}
