@@ -17,6 +17,6 @@
 {% endfor %}
 
 {% if current_user.is_authenticated %}
-<button class="add_news_button" onclick="window.location.href = 'http://127.0.0.1:8080/create_news';">+</button>
+<button class="add_news_button" onclick="window.location.href = '/create_news';">+</button>
 {% endif %}
 {% endblock %}
