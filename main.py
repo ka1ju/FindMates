@@ -46,7 +46,7 @@ def r():
             return render_template('register.html', form=form,
                                    message="Current user is already registered")
         user = User(username=form.name.data, discord=form.discord.data, competitive_rank="1", wingman_rank="1",
-                    faceit_level=1, steam=form.steam.data, is_active=True, is_admin=False)
+                    faceit_level=1, steam=form.steam.data, is_active=True)
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
