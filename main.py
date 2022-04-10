@@ -46,7 +46,7 @@ def r():
             return render_template('register.html', form=form,
                                    message="Current user is already registered")
         user = User(username=form.name.data, discord=form.discord.data, competitive_rank="1", wingman_rank="1",
-                    faceit_level=1, steam=form.steam.data, is_active=True)
+                    faceit_level=1, steam=form.steam.data, is_active=True, is_admin=False)
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
@@ -88,9 +88,9 @@ def create_news():
     form = NewsForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
-        news = News(title=form.title.data, content=form.content.data, user_id=current_user.id)
+        n = News(title=form.title.data, content=form.content.data, user_id=current_user.id)
         print(form.title, form.content, current_user.id)
-        db_sess.add(news)
+        db_sess.add(n)
         db_sess.commit()
         return redirect('/')
     return render_template('create_news.html', form=form)
