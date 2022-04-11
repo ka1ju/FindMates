@@ -89,7 +89,6 @@ def create_news():
     if form.validate_on_submit():
         db_sess = db_session.create_session()
         n = News(title=form.title.data, content=form.content.data, user_id=current_user.id)
-        print(form.title, form.content, current_user.id)
         db_sess.add(n)
         db_sess.commit()
         return redirect('/')

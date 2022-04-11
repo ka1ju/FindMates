@@ -18,6 +18,10 @@
   {{ form.content.label }}<br>
         {{ form.content(class="form-control add_news_content") }}<br>
   </p>
+    <p>
+        {{form.file_name.label}}<br>
+             {{form.file_name()}}
+    </p>
   <p>
         {{ form.submit(class="form-control add", type="submit") }}
   </p>

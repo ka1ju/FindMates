@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, TextAreaField, SubmitField, EmailField, BooleanField
+from wtforms import *
 from wtforms.validators import DataRequired
 
 
@@ -26,4 +26,5 @@ class ExitForm(FlaskForm):
 class NewsForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
+    file_name = FileField('Image', validators=[DataRequired()])
     submit = SubmitField('Add')
