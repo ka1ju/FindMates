@@ -408,3 +408,8 @@ border: none;
 border-radius: 8px;
 resize: none;
 }
+
+.img_for_news{
+margin-left: 2%;
+height: 20px;
+}

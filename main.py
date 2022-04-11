@@ -4,7 +4,8 @@ from flask_login import LoginManager, login_user, current_user, logout_user
 from data import db_session
 from data.news import News
 from data.users import User
-from forms.user import *
+from forms.user import LoginForm, NewsForm, RegisterForm
+from werkzeug.utils import secure_filename
 
 app = Flask('__name__')
 app.config['SECRET_KEY'] = 'yandex_lyceum_secret_key'
@@ -90,6 +91,13 @@ def create_news():
         db_sess = db_session.create_session()
         n = News(title=form.title.data, content=form.content.data, user_id=current_user.id)
         db_sess.add(n)
+        nn = db_sess.query(News)
+        nn = list(nn)
+        filename = str(nn[-1].id) + '.png'
+        f = form.photo.data
+        f.save(os.path.join(
+            'C:/Users/Ярослав/Documents/ЯЛ/FindMates/static/img/', filename
+        ))
         db_sess.commit()
         return redirect('/')
     return render_template('create_news.html', form=form)
@@ -97,5 +105,5 @@ def create_news():
 
 if __name__ == '__main__':
     db_session.global_init("db/my-mates.sqlite")
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host='127.0.0.1', port=port)

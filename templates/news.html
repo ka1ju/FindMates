@@ -11,6 +11,7 @@
 <div class="news">
     <h2>{{item.title}}</h2>
     <textarea readonly class="news_form">{{item.content}}</textarea>
+    <img style="max-width:100%;max-height: 1000px;" src="static/img/{{item.id}}.png" alt="">
     <h6>Автор - {{item.user.username}}, Дата написания - {{item.created_date}}</h6>
 </div>
 <br>
