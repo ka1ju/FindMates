@@ -33,6 +33,30 @@
             </p>
     {% endfor %}
     <p>
+        {{ form.competitive_rank.label }}<br>
+        {{ form.competitive_rank(class="form-control login_inputs") }}<br>
+        {% for error in form.competitive_rank.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.wingman_rank.label }}<br>
+        {{ form.wingman_rank(class="form-control login_inputs") }}<br>
+        {% for error in form.wingman_rank.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.faceit.label }}<br>
+        {{ form.faceit(class="form-control login_inputs") }}<br>
+        {% for error in form.faceit.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
         {{ form.password.label }}<br>
         {{ form.password(class="form-control login_inputs", type="password") }}<br>
         {% for error in form.password.errors %}
