@@ -4,7 +4,7 @@ from flask_login import LoginManager, login_user, current_user, logout_user
 from data import db_session
 from data.news import News
 from data.users import User
-from forms.user import LoginForm, NewsForm, RegisterForm
+from forms.user import LoginForm, NewsForm, RegisterForm, EditForm
 from werkzeug.utils import secure_filename
 
 app = Flask('__name__')

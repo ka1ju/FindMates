@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Edit profile
+</title>
+{% endblock %}
+
+
+{% block content %}
+<h1 style="margin-left: 46%">Edit profile</h1>
+<form action="" method="get" class="full_register_form">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.discord.label }}<br>
+        {{ form.discord(class="form-control login_inputs") }}<br>
+        {% for error in form.discord.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.steam.label }}<br>
+        {{ form.steam(class="form-control login_inputs") }}<br>
+        {% for error in form.steam.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.competitive_rank.label }}<br>
+        {{ form.competitive_rank(class="form-control login_inputs") }}<br>
+        {% for error in form.competitive_rank.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.wingman_rank.label }}<br>
+        {{ form.wingman_rank(class="form-control login_inputs") }}<br>
+        {% for error in form.wingman_rank.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>
+        {{ form.faceit.label }}<br>
+        {{ form.faceit(class="form-control login_inputs") }}<br>
+        {% for error in form.faceit.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+    {% endfor %}
+    <p>{{ form.submit(type="submit", class="full_register_button") }}</p>
+    {{message}}
+</form>
+{% endblock %}

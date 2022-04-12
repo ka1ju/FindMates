@@ -28,3 +28,12 @@ class NewsForm(FlaskForm):
     content = TextAreaField('Content', validators=[DataRequired()])
     photo = FileField('Image')
     submit = SubmitField('Add')
+
+
+class EditForm(FlaskForm):
+    discord = StringField('Discord', validators=[DataRequired()])
+    steam = StringField('Steam link', validators=[DataRequired()])
+    competitive_rank = StringField('Competitive rank', validators=[DataRequired()])
+    wingman_rank = StringField('Wingman rank', validators=[DataRequired()])
+    faceit = IntegerField('Faceit', validators=[DataRequired()])
+    submit = SubmitField('Update')
