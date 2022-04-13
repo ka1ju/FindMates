@@ -13,22 +13,27 @@ messages = \
      'Profile redirects u to the page, where u can login to ur profile, and view it after logging in.',
 
      'On this screen u can see news page. \n\n'
-     'How was sad before here u can read news, what are posted by our admins.',
+     'How was sad before here u can read news, what are posted by our admins.'
+     'https://find-mates.herokuapp.com/news',
 
      'Here u can see page, where u can find teammates. \n\n'
      'Every user have discord and steam profile link, so u can use in to contact with them, '
-     'if u think that they correspond to ur criteria ',
+     'if u think that they correspond to ur criteria.'
+     'https://find-mates.herokuapp.com/find_mates',
 
      'This is the login form.\n\n'
      "U can login on our site after register. U can register on the register form, "
-     "what you'll see,on the next screenshot",
+     "what you'll see,on the next screenshot"
+     "https://find-mates.herokuapp.com/login",
 
      'Here is it - register form.\n\n'
-     'In it u need provide information about u. After it u need to click confirm button. Now u are registered.',
+     'In it u need provide information about u. After it u need to click confirm button. Now u are registered.'
+     'https://find-mates.herokuapp.com/login',
 
      'After register u may return to the login form, and log into your account. '
      'After it you will see your profile.\n\n'
-     'Now, here u can check your information out and logout.']
+     'Now, here u can check your information out and logout.'
+     'https://find-mates.herokuapp.com/login']
 
 
 @bot.message_handler(commands=['start'])
