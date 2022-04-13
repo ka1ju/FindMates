@@ -21,7 +21,7 @@ messages = \
 
      'This is the login form.\n\n'
      "U can login on our site after register. U can register on the register form, "
-     "what you'll see,on the next screenshot"
+     "what you'll see,on the next screenshot",
 
      'Here is it - register form.\n\n'
      'In it u need provide information about u. After it u need to click confirm button. Now u are registered.',
@@ -51,7 +51,7 @@ def next_image(message):
     bot.send_photo(message.chat.id, photo=file, caption=messages[k])"""
     bot.send_message(message.chat.id, messages[k])
     k += 1
-    k %= 5
+    k %= 6
 
 
 bot.infinity_polling()
