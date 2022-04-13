@@ -1,7 +1,9 @@
-flask~=2.1.1
+flask
 flask_wtf
 flask_login
-sqlalchemy~=1.4.35
+sqlalchemy
 
-Werkzeug~=2.1.1
-WTForms~=3.0.1
+Werkzeug
+WTForms
+pyTelegramBotAPI
+aiogram
