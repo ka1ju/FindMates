@@ -97,7 +97,7 @@ def create_news():
         filename = str(nn[-1].id) + '.png'
         f = form.photo.data
         f.save(os.path.join(
-            'C:/Users/Ярослав/Documents/ЯЛ/FindMates/static/img/', filename
+            'static/img/', filename
         ))
         db_sess.commit()
         return redirect('/')
