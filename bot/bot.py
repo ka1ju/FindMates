@@ -52,8 +52,8 @@ def start_message(message):
 @bot.message_handler(commands=["🏎️"])
 def next_image(message):
     global k
-    """file = open('img/00.png', 'rb')
-    bot.send_photo(message.chat.id, photo=file, caption=messages[k])"""
+    file = open('img/00.png', 'rb')
+    """bot.send_photo(message.chat.id, photo=file, caption=messages[k])"""
     bot.send_message(message.chat.id, messages[k])
     k += 1
     k %= 6
